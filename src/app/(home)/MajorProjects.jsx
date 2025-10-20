@@ -67,7 +67,7 @@ const MajorProjects = () => {
   return (
     // Section container with generous vertical padding
     <section className="py-16 md:py-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
         
         {/* Section Header */}
         <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">

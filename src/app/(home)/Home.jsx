@@ -83,7 +83,7 @@ const Home1 = () => {
         <title>Building Spaces with Strength and Precision</title>
       </Head>
       
-      <section className="bg-white min-h-screen pt-12 md:pt-20 lg:pt-24 max-w-[1400px] mx-auto">
+      <section className="bg-white  pt-12 md:pt-20 lg:pt-24 max-w-[1400px] mx-auto">
         
         <div className="container mx-auto grid lg:grid-cols-2 gap-12 lg:gap-8 px-4 sm:px-6 lg:px-8">
           

@@ -5,18 +5,18 @@ import React from 'react';
 // Define your logo image paths. Use placeholder URLs for demonstration.
 // In a real project, use imported images or actual CDN paths.
 const clientLogos = [
-  { src: 'https://placeholder.co/150x50/808080/FFFFFF/svg?text=Logipsum', alt: 'Client Logo 1' },
-  { src: 'https://placeholder.co/150x50/808080/FFFFFF/svg?text=logo+ipsum', alt: 'Client Logo 2' },
-  { src: 'https://placeholder.co/150x50/808080/FFFFFF/svg?text=Logipsum', alt: 'Client Logo 3' },
-  { src: 'https://placeholder.co/150x50/808080/FFFFFF/svg?text=LOGOSUM', alt: 'Client Logo 4' },
+  { src: 'https://fastly.picsum.photos/id/503/200/300.jpg?hmac=NvjgwV94HmYqnTok1qtlPsDxdf197x8fsWy5yheKlGg', alt: 'Client Logo 1' },
+  { src: 'https://fastly.picsum.photos/id/729/200/200.jpg?hmac=hCw_uurY9O39ITS0MMk7fNNdWPaY20TzXz2NTAkEslU', alt: 'Client Logo 2' },
+  { src: 'https://fastly.picsum.photos/id/872/200/200.jpg?hmac=m0AwAUFkEiEz2KW58n6a5RVkKaClHNylfppYjE3a0v4', alt: 'Client Logo 3' },
+  { src: 'https://fastly.picsum.photos/id/372/200/200.jpg?hmac=QFGGlcWGNWBK0oDD1jghIaCvGIFU5iJJcd2VhF5oH6o', alt: 'Client Logo 4' },
   // Add more logos here for a better loop effect
-  { src: 'https://placeholder.co/150x50/808080/FFFFFF/svg?text=DesignCo', alt: 'Client Logo 5' },
+  { src: 'https://fastly.picsum.photos/id/927/200/200.jpg?hmac=8gJRiqNVrPAFPg0IyGTTYxaPJBSoLOVg4elvGEPV30M', alt: 'Client Logo 5' },
 ];
 
 // Component to render a single set of logos
 const LogoSet = ({logos}) => (
     // Set a minimum width for the container to ensure logos don't stack too early on large screens
-    <div className="flex flex-shrink-0 justify-around items-center w-full min-w-max space-x-12 sm:space-x-16 md:space-x-20 lg:space-x-24">
+    <div className="flex max-w-[1440px] flex-shrink-0 justify-around items-center w-full min-w-max space-x-12 sm:space-x-16 md:space-x-20 lg:space-x-24">
         {logos.map((logo, index) => (
             <div key={index} className="flex-shrink-0 opacity-50 hover:opacity-100 transition duration-300">
                 <img 
@@ -38,7 +38,7 @@ const ClientCarousel = () => {
   return (
     // Ensure the container is full width and has responsive padding
     <section className="bg-white py-10 md:py-16 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main layout: Heading on the left, Carousel on the right/bottom */}
         <div className="flex flex-col lg:flex-row items-center lg:space-x-12">

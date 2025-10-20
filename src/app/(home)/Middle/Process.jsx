@@ -68,7 +68,7 @@ const Process = () => {
 
     return (
         <section className="bg-white py-16 md:py-24 text-center">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
                 
                 {/* Section Header */}
                 <h2 className="text-3xl sm:text-5xl font-extrabold text-gray-900 mb-4">
