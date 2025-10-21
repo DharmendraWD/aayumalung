@@ -15,7 +15,7 @@ export default function FooterHero() {
 
         {/* Sub-description */}
         <p className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto mb-12">
-          Lorem ipsum .lorem ipsum , lorem ipsum ajshxajsgxaxasxasxasxasxasdbteggweDV
+          Lorem ipsum .lorem ipsum , lorem ipsum ajshxaj sgxaxasxasxasxa sxasdbteggweDV
         </p>
 
         {/* Call-to-Action Button */}

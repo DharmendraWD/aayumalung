@@ -100,7 +100,7 @@ const Home1 = () => {
               people who live and work in them.
             </p>
 
-            <div className="mt-10 flex space-x-4">
+            <div className="mt-10 md:flex-row md:gap-1 gap-[10px] flex-col flex space-x-4">
           <RoundedBgBtn label="Get Started"></RoundedBgBtn>
             <RoundedNotBGBtn label="See Our Projects"></RoundedNotBGBtn>
             </div>
@@ -110,6 +110,7 @@ const Home1 = () => {
             <ScrollingImageGrid />
           </div>
         </div>
+        
       </section>
     </>
   );
