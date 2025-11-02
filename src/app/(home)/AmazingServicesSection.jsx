@@ -53,12 +53,12 @@ const ServiceCard = ({ service }) => {
   const IconComponent = service.icon;
   
   // Base classes for the card (ensures equal height/width across all service cards)
-  let cardClasses = `p-6 rounded-br-[95px] md:p-8 rounded-2xl h-full transition-all duration-500 ease-in-out cursor-pointer`;
+  let cardClasses = `p-6 group rounded-br-[95px] md:p-8 rounded-2xl h-full transition-all duration-500 ease-in-out cursor-pointer`;
   
   // Styling for all service cards (id=1 to 5)
   // All cards will now use the same hover effect
-  cardClasses += ` bg-white border border-gray-100 shadow-md 
-                  hover:bg-[#0009FF] hover:text-[white] hover:border-transparent 
+  cardClasses += `bg-white group border border-gray-100 shadow-md 
+                  hover:bg-[var(--primary1)] hover:text-[white] hover:border-transparent 
                   hover:shadow-2xl hover:scale-[1.03] hover:rotate-1`; 
 
 
@@ -78,18 +78,18 @@ const ServiceCard = ({ service }) => {
       <div className={`flex items-center mb-4 transition-colors duration-500 `}>
         {/* Icon */}
         <div className={`p-2 rounded-full mr-4 ${iconBg}`}>
-          <IconComponent className={`${iconColor}`} size={24} />
+          <IconComponent className={`${iconColor} group-hover:text-blue-600`} size={24} />
         </div>
         
         {/* Title */}
-        <h3 className={`text-xl font-semibold ${textColor} transition-colors duration-500`}>
+        <h3 className={`text-xl font-semibold ${textColor} group-hover:text-white transition-colors duration-500`}>
           {service.title}
         </h3>
       </div>
       
       {/* Description */}
-      <p className={`mt-3 text-base leading-relaxed ${descColor} transition-colors duration-500`}>
-        {service.description}
+      <p className={`mt-3 text-base leading-relaxed ${descColor} group-hover:text-white transition-colors duration-500`}>
+{service.description} 
       </p>
     </div>
   );

@@ -28,7 +28,7 @@ const mvvData = [
 // Reusable MVV Card Component
 const MvvCard = ({ item }) => {
   const IconComponent = item.icon;
-  const hoverBgColor = 'indigo-600'; // Placeholder for the blue hover background
+  const hoverBgColor = '#424BD0'; // Placeholder for the blue hover background
 
   return (
     <div
@@ -38,30 +38,30 @@ const MvvCard = ({ item }) => {
                   flex flex-col justify-start text-left
                   
                   // Hover Effect: Blue background, white text
-                  hover:bg-${hoverBgColor} hover:text-white hover:border-transparent 
+                  hover:bg-[var(--primary1)] hover:text-white hover:border-transparent 
                   hover:shadow-lg`}
     >
       <div className="flex items-center mb-4">
         {/* Icon Container */}
-        <div className={`p-3 rounded-full mr-4 bg-blue-50 text-blue-600 
+        <div className={`p-3 rounded-full mr-4 bg-[var(--primary1)] bg-opacity-10 text-white 
                          transition-all duration-300 ease-in-out 
-                         group-hover:bg-indigo-500 group-hover:text-white`}>
+                         group-hover:bg-white group-hover:text-[var(--primary1)]`}>
             {/* The 'group-hover' classes are critical for children to react to parent hover */}
           <IconComponent size={24} />
         </div>
         
         {/* Title */}
-        <h3 className="text-xl font-semibold text-gray-900 
+        <h3 className={`text-xl font-semibold text-gray-900 
                        transition-colors duration-300 ease-in-out
-                       group-hover:text-white">
-            {item.title}
+                       group-hover:text-white`}>
+            {item.title} "lssla"
         </h3>
       </div>
       
       {/* Description */}
       <p className="mt-2 text-base text-gray-600 leading-relaxed 
                     transition-colors duration-300 ease-in-out
-                    group-hover:text-indigo-200">
+                    group-hover:text-white">
         {item.description}
       </p>
     </div>

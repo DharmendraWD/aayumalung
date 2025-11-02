@@ -27,17 +27,17 @@ const processSteps = [
 ];
 
 // Reusable Step Component
-const ProcessStep = ({ step, isLast }) => {
+const ProcessStep = ({ step, isLast, index }) => {
   const primaryColorClass = 'text-indigo-600'; // Placeholder for the blue text/line color
   const primaryBgClass = 'bg-indigo-600'; // Placeholder for the blue line color
 
   return (
-    <div className="flex flex-col w-full px-2 sm:px-4 md:w-1/3 relative z-10">
+    <div className={`flex flex-col w-full px-2 sm:px-4 md:w-1/3 relative z-10`}  style={{ flex: step.id }}>
         
         {/* --- Top Half: Number and Line --- */}
         <div className="flex flex-col items-baseline justify-start h-8 md:h-12 relative">
             {/* 1. Number */}
-           <h1 className='font-semibold text-[30px] text-[var(--primary1)]'>1</h1>
+           <h1 className='font-semibold text-[30px] text-[var(--primary1)]'>{step.id}</h1>
 <Image height={300} width={300} src={arrow} alt="Arrow" className="w-[70%]" />
 
         </div>
@@ -83,7 +83,7 @@ const Process = () => {
                     
                
                     {/* Render Steps */}
-                    {processSteps.map((step) => (
+                    {processSteps.map((step, index) => (
                         <ProcessStep 
                             key={step.id} 
                             step={step} 
@@ -95,7 +95,7 @@ const Process = () => {
                 {/* --- Timeline Container (Mobile/Tablet View) --- */}
                 {/* On mobile, we switch to a simple vertical stack for readability. */}
                 <div className="md:hidden flex flex-col items-start w-full mt-4">
-                    {processSteps.map((step) => (
+                    {processSteps.map((step, index) => (
                         <div key={step.id} className="w-full pb-6 border-b border-gray-200 last:border-b-0">
                             <ProcessStep 
                                 step={step} 
