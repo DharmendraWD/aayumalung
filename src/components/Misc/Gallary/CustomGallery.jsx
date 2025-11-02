@@ -38,7 +38,7 @@ const CustomGallery = () => {
         return (
           <div
             key={image.id}
-            className={`${colSpan}  relative rounded-lg group h-full w-full`}
+            className={`${colSpan}  relative rounded-lg group h-full w-full overflow-hidden`}
           >
             <Image
               src={image.src}

@@ -66,14 +66,14 @@ const TestimonialSlider = () => {
           <div className="flex space-x-3">
             <button 
               onClick={handlePrev}
-              className="p-3 rounded-full bg-white text-[var(--primary2)] hover:bg-gray-200 transition-colors shadow-lg"
+              className="p-3 rounded-full cursor-pointer bg-white text-[var(--primary2)] hover:bg-gray-200 transition-colors shadow-lg"
               aria-label="Previous testimonial"
             >
               <BsChevronLeft className="w-5 h-5" />
             </button>
             <button 
               onClick={handleNext}
-              className="p-3 rounded-full bg-white text-[var(--primary2)] hover:bg-gray-200 transition-colors shadow-lg"
+              className="p-3 rounded-full cursor-pointer bg-white text-[var(--primary2)] hover:bg-gray-200 transition-colors shadow-lg"
               aria-label="Next testimonial"
             >
               <BsChevronRight className="w-5 h-5" />
