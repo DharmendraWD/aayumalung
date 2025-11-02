@@ -1,10 +1,11 @@
 // components/AppFooter.jsx
-
+"use client";
 import Image from 'next/image';
 import Link from 'next/link'; // For Next.js client-side navigation
 import { MdEmail, MdPhone, MdLocationOn } from 'react-icons/md';
 import { FaInstagram, FaTwitter, FaTelegramPlane, FaYoutube } from 'react-icons/fa';
 import map from '../../../../public/img/gallary/1.png';
+import "leaflet/dist/leaflet.css";
 
 // --- MOCK DATA ---
 const navigationLinks = [
@@ -59,6 +60,8 @@ const socialLinks = [
 
 
 export default function Footer() {
+  
+    const position = [37.7749, -122.4194]; // your latitude/longitude
   return (
     <footer className="bg-[#F9F9FF] pt-16 pb-8 md:pt-24 md:pb-12 ">
       <div className="container mx-auto px-4 max-w-[1440px relative">
@@ -135,12 +138,17 @@ export default function Footer() {
 
 <div>
 
-        <Image 
-                src={map} // Using imported image
-                alt="Our location on map"
-                className='w-[250px] rounded-sm'
-              />
-                          <p className="text-gray-700 font-medium">Our Location</p>
+                          <p className="text-gray-700 font-medium text-center mb-4">Our Location</p>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14130.859891299282!2d85.3245952!3d27.695203000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snp!4v1762068999477!5m2!1sen!2snp"
+        width="100%"
+        height="100%"
+        style={{ border: 0 }}
+        allowFullScreen
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+      ></iframe>
+
 
 </div>
 
